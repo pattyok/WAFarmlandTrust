@@ -1,0 +1,69 @@
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+.footer-colophon {
+	padding: 4em 0;
+	font-family: var(--highlight-font-family);
+	font-stretch: condensed;
+	font-size: 14px;
+}
+
+.colophon {
+	text-align: center;
+}
+
+.colophon-info li {
+	padding-bottom: 5px;
+}
+
+.site-info {
+	text-align: center;
+}
+
+.footer-section {
+	padding: 3rem 2rem;
+}
+
+.footer-section .widget_wrapper {
+	display: flex;
+	flex-direction: column;
+}
+
+.footer-upper {
+	background-color: var(--color-theme-grey-light);
+}
+
+@media (--tablet-up) {
+
+	.colophon-info {
+		display: flex;
+		justify-content: center;
+	}
+
+	.colophon-info li {
+		padding: 0;
+	}
+
+	.colophon-info .site-credits {
+		margin-left: 10px;
+		padding-left: 10px;
+		border-left: 1px solid var(--color-theme-grey);
+	}
+
+	.footer-upper {
+		padding: 4rem 2rem;
+	}
+
+	.footer-upper .widget_wrapper {
+		max-width: var(--content-width);
+		margin: 0 auto;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.footer-section .gform_body {
+		max-width: 425px;
+		margin: 0 auto;
+	}
+}
