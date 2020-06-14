@@ -24,4 +24,6 @@
 	$( document ).ready( function() {
 		portfolioBlockSize();
 	} );
+
+	$( '.info-popover' ).gpopover();
 }( jQuery ) );

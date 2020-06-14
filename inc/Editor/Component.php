@@ -50,6 +50,15 @@ class Component implements Component_Interface {
 		// Add support for wide-aligned images.
 		add_theme_support( 'align-wide' );
 
+		// Disable custom colors in the color picker.
+		add_theme_support( 'disable-custom-colors' );
+
+		// Disable custom gradients.
+		add_theme_support( '__experimental-disable-custom-gradients' );
+
+		// Disable gradients.
+		add_theme_support( '__experimental-editor-gradient-presets', array() );
+
 		/**
 		 * Add support for color palettes.
 		 *
@@ -62,33 +71,64 @@ class Component implements Component_Interface {
 		 * add_theme_support( 'disable-custom-colors' );
 		 * --color-theme-black: #1c2833;
 		 */
+
 		add_theme_support(
 			'editor-color-palette',
 			array(
 				array(
-					'name'  => __( 'Primary', 'wp-rig' ),
-					'slug'  => 'theme-primary',
-					'color' => '#545454',
+					'name'  => __( 'Green', 'wp-rig' ),
+					'slug'  => 'theme-green',
+					'color' => '#68813C',
 				),
 				array(
-					'name'  => __( 'Secondary', 'wp-rig' ),
-					'slug'  => 'theme-secondary',
-					'color' => '#ddd',
+					'name'  => __( 'Yellow', 'wp-rig' ),
+					'slug'  => 'theme-yellow',
+					'color' => '#CAB44B',
 				),
 				array(
-					'name'  => __( 'Grey Med Light', 'wp-rig' ),
-					'slug'  => 'theme-grey-med-light',
-					'color' => '#b6b6b6',
+					'name'  => __( 'Orange', 'wp-rig' ),
+					'slug'  => 'theme-orange',
+					'color' => '#c7932c',
+				),
+				array(
+					'name'  => __( 'Blue', 'wp-rig' ),
+					'slug'  => 'theme-blue',
+					'color' => '#a2c6d2',
+				),
+				array(
+					'name'  => __( 'Red', 'wp-rig' ),
+					'slug'  => 'theme-red',
+					'color' => '#a55525',
+				),
+				array(
+					'name'  => __( 'Green Light', 'wp-rig' ),
+					'slug'  => 'theme-green-light',
+					'color' => '#a7ad37',
+				),
+				array(
+					'name'  => __( 'Red Light', 'wp-rig' ),
+					'slug'  => 'theme-red-light',
+					'color' => '#e8b7b1',
 				),
 				array(
 					'name'  => __( 'Grey', 'wp-rig' ),
 					'slug'  => 'theme-grey',
-					'color' => '#979797',
+					'color' => '#777',
 				),
 				array(
-					'name'  => __( 'Grey Med Dark', 'wp-rig' ),
-					'slug'  => 'theme-grey-med-dark',
-					'color' => '#717171',
+					'name'  => __( 'Grey Light', 'wp-rig' ),
+					'slug'  => 'theme-grey-light',
+					'color' => '#e0e0e0',
+				),
+				array(
+					'name'  => __( 'Grey Lightest', 'wp-rig' ),
+					'slug'  => 'theme-grey-light',
+					'color' => '#e3e3e3',
+				),
+				array(
+					'name'  => __( 'Black', 'wp-rig' ),
+					'slug'  => 'theme-red-light',
+					'color' => '#1c2833',
 				),
 				array(
 					'name'  => __( 'White', 'wp-rig' ),
@@ -116,7 +156,7 @@ class Component implements Component_Interface {
 				array(
 					'name'      => __( 'Medium', 'wp-rig' ),
 					'shortName' => __( 'M', 'wp-rig' ),
-					'size'      => 25,
+					'size'      => 18,
 					'slug'      => 'medium',
 				),
 				array(

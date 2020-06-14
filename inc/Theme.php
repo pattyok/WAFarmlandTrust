@@ -154,6 +154,7 @@ class Theme {
 			new Styles\Component(),
 			new Scripts\Component(),
 			new Blocks\Component(),
+			new Helpers\Component(),
 		);
 
 		if ( defined( 'JETPACK__VERSION' ) ) {

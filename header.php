@@ -37,12 +37,21 @@ namespace WP_Rig\WP_Rig;
 
 	<header id="masthead" class="site-header">
 		<div class="site-header--inner">
-			<?php get_template_part( 'template-parts/header/top_navigation' ); ?>
 
 			<?php get_template_part( 'template-parts/header/custom_header' ); ?>
 
 			<?php get_template_part( 'template-parts/header/branding' ); ?>
 
-			<?php get_template_part( 'template-parts/header/navigation' ); ?>
+			<div class="header-nav-wrapper">
+
+				<?php get_template_part( 'template-parts/header/navigation' ); ?>
+
+				<?php get_template_part( 'template-parts/header/search' ); ?>
+
+				<?php get_template_part( 'template-parts/header/top_navigation' ); ?>
+
+			</div>
 		</div>
+
 	</header><!-- #masthead -->
+	<div class="overlay"></div>

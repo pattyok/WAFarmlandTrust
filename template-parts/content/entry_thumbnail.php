@@ -23,9 +23,13 @@ if ( post_password_required() || ! post_type_supports( $support_slug, 'thumbnail
 
 if ( is_singular( get_post_type() ) ) {
 	?>
-	<div class="post-thumbnail testing">
+	<div class="post-thumbnail">
 		<?php the_post_thumbnail( 'wp-rig-featured', array( 'class' => 'skip-lazy' ) ); ?>
 	</div><!-- .post-thumbnail -->
+	<?php $caption = wp_get_attachment_caption( get_post_thumbnail_id() ); ?>
+	<?php if ( ! empty( $caption ) ) { ?>
+	<div class="image-caption"><?php echo esc_html( $caption ); ?></div>
+	<?php } ?>
 	<?php
 } else {
 	?>

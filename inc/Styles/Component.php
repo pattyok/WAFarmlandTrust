@@ -304,18 +304,6 @@ class Component implements Component_Interface, Templating_Component_Interface {
 				'file'             => 'content.min.css',
 				'preload_callback' => '__return_true',
 			),
-			'wp-rig-sidebar'    => array(
-				'file'             => 'sidebar.min.css',
-				'preload_callback' => function() {
-					return wp_rig()->is_primary_sidebar_active();
-				},
-			),
-			'wp-rig-widgets'    => array(
-				'file'             => 'widgets.min.css',
-				'preload_callback' => function() {
-					return wp_rig()->is_primary_sidebar_active();
-				},
-			),
 			'wp-rig-front-page' => array(
 				'file'             => 'front-page.min.css',
 				'preload_callback' => function() {
@@ -369,10 +357,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 			return $this->google_fonts;
 		}
 
-		$google_fonts = array(
-			'Nanum Gothic' => array( '400', '700', '800' ),
-			'Nanum Myeongjo' => array( '400', '700', '800' ),
-		);
+		$google_fonts = array();
 
 		/**
 		 * Filters default Google Fonts.
@@ -429,6 +414,6 @@ class Component implements Component_Interface, Templating_Component_Interface {
 	 * @return string Google Fonts URL, or empty string if no Google Fonts should be used.
 	 */
 	protected function get_typekit_fonts_url() : string {
-		return '';
+		return 'https://use.typekit.net/ski0orr.css';
 	}
 }

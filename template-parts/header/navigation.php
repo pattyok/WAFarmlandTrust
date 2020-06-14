@@ -36,7 +36,7 @@ if ( ! wp_rig()->is_primary_nav_menu_active() ) {
 	}
 	?>
 
-	<button class="menu-toggle" aria-label="<?php esc_attr_e( 'Open menu', 'wp-rig' ); ?>" aria-controls="primary-menu" aria-expanded="false"
+	<button class="header-toggle menu-toggle hamburger hamburger--spring" aria-label="<?php esc_attr_e( 'Open menu', 'wp-rig' ); ?>" id="primary-menu-toggle" data-toggleoff="search-toggle" aria-controls="primary-menu" aria-expanded="false"
 		<?php
 		if ( wp_rig()->is_amp() ) {
 			?>
@@ -47,7 +47,7 @@ if ( ! wp_rig()->is_primary_nav_menu_active() ) {
 		?>
 	>
 		<span class="menu-toggle-label"><?php esc_html_e( 'Menu', 'wp-rig' ); ?></span>
-		<i class="menu-toggle-icon icon-menu"></i>
+		<span class="hamburger-box"><span class="hamburger-inner"></span></span>
 	</button>
 
 	<div class="primary-menu-container">

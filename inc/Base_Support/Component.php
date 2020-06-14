@@ -50,6 +50,7 @@ class Component implements Component_Interface, Templating_Component_Interface {
 		add_filter( 'theme_scandir_exclusions', array( $this, 'filter_scandir_exclusions_for_optional_templates' ) );
 		add_filter( 'script_loader_tag', array( $this, 'filter_script_loader_tag' ), 10, 2 );
 		add_filter( 'get_the_archive_title', array( $this, 'filter_archive_title' ), 10, 2 );
+		add_action( 'acf/init', array( $this, 'wpdocs_register_theme_settings' ), 10 );
 	}
 
 	/**
@@ -284,5 +285,22 @@ class Component implements Component_Interface, Templating_Component_Interface {
 		return $tag;
 	}
 
+	/**
+	 * Adds Settings page
+	 */
+	public function wpdocs_register_theme_settings() {
+		if ( function_exists( 'acf_add_options_page' ) ) {
+
+			acf_add_options_page(
+				array(
+					'page_title' => 'Theme General Settings',
+					'menu_title' => 'Theme Settings',
+					'menu_slug'  => 'theme-general-settings',
+					'capability' => 'edit_posts',
+					'redirect'   => false,
+				)
+			);
+		}
+	}
 
 }

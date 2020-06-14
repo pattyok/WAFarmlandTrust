@@ -70,9 +70,16 @@ if ( is_404() ) {
 		get_template_part( 'template-parts/content/entry_thumbnail', get_post_type() );
 	}
 	if ( true !== $hide_title ) {
-		the_title( '<h1 class="entry-title">', '</h1>' );
-	}
-	?>
+		?>
+		<div class="entry-title">
+		<?php
+		if ( $post->parent !== 0 ) {
+			echo '<span>' . get_the_title( $post->post_parent ) . '</span>';
+		}
+		the_title( '<h1>', '</h1>' );
+		?>
+	</div>
+	<?php } ?>
 	</header><!-- .page-header -->
 	<?php
 }

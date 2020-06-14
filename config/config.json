@@ -7,7 +7,7 @@
   "dev": {
     "browserSync": {
       "live": true,
-      "proxyURL": "carkeek-theme.local",
+      "proxyURL": "wa-farmland-trust.local",
       "bypassPort": "3000",
       "https": true,
       "certPath": "/Users/pattyohara/Sites/BrowserSync/wp-rig-browser-sync-cert.crt",
